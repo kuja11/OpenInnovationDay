@@ -1,0 +1,33 @@
+{
+  "welcomeFile": "/home/index.html",
+  "authenticationMethod": "route",
+  "errorPage": [
+    { "status": 401, "file": "./errors/unauthorized.html" },
+	{ "status": 403, "file": "./errors/forbidden.html" },
+	{ "status": 404, "file": "./errors/notfound.html" },
+    { "status": 500, "file": "./errors/internal.html"}
+  ],
+  "routes": [
+    {
+      "source": "^/srv-api/(.*)",
+      "target": "$1",
+      "authenticationType": "xsuaa",
+      "destination": "ExampleAPI"
+    },
+    {
+        "source": "^/app/(.*)$",
+        "target": "$1",
+        "authenticationType": "xsuaa",
+        "cacheControl": "no-cache, no-store, must-revalidate",
+        "service": "examplehtml5"
+    },
+    {
+      "source": "^/(.*)$",
+      "target": "$1",
+      "authenticationType": "xsuaa",
+      "cacheControl": "no-cache, no-store, must-revalidate",
+      "localDir": "home"
+    }
+  ]
+}
+

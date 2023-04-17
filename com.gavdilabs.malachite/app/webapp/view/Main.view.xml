@@ -1,0 +1,17 @@
+<mvc:View
+	controllerName="com.gavdilabs.ui5template.controller.Main"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+
+<List
+		items="{/User}"
+		headerText="Users"
+		growing="true"
+		growingThreshold="4"
+		growingScrollToLoad="false">
+		<StandardListItem
+            title="{firstName} {lastName}"
+			description="{userName}"/>
+	</List>
+</mvc:View>
