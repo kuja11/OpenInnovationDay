@@ -1,0 +1,54 @@
+{
+    "[development]": {
+        "auth": {
+            "passport": {
+                "strategy": "mock",
+                "users": {
+                    "user": {
+                        "password": "1234",
+                        "ID": "basicuser",
+                        "roles": [
+                            "USER"
+                        ]
+                    },
+                    "manager": {
+                        "password": "1234",
+                        "ID": "basicmanager",
+                        "roles": [
+                            "MANAGER"
+                        ]
+                    },
+                    "admin": {
+                        "password": "1234",
+                        "ID": "basicadmin",
+                        "roles": [
+                            "ADMIN"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "build": {
+        "tasks": [
+            {
+                "for": "node-cf",
+                "src": "srv",
+                "options": {
+                    "model": [
+                        "db",
+                        "srv"
+                    ]
+                }
+            },
+            {
+                "use": "cds-dbm/dist/build/postgres-cf",
+                "for": "postgres-cf",
+                "src": "db",
+                "options": {
+                    "deployCmd": "npx cds-dbm deploy --load-via delta --auto-undeploy"
+                }
+            }
+        ]
+    }
+}

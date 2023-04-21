@@ -1,0 +1,38 @@
+{
+    "xsappname": "basiccaptemplate",
+    "tenant-mode": "dedicated",
+    "authorities-inheritance": false,
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.USER",
+            "description": "User Scope"
+        },
+        {
+            "name": "$XSAPPNAME.MANAGER",
+            "description": "Manager Scope"
+        },
+        {
+            "name": "$XSAPPNAME.ADMIN",
+            "description": "Admin Scope"
+        }
+    ],
+    "attributes": [],
+    "role-templates": [
+        {
+            "name": "USER",
+            "description": "User Role",
+            "scope-references": ["$XSAPPNAME.USER"]
+        },
+        {
+            "name": "MANAGER",
+            "description": "Manager Role",
+            "scope-references": ["$XSAPPNAME.MANAGER"]
+        },
+        {
+            "name": "ADMIN",
+            "description": "Admin Role",
+            "scope-references": ["$XSAPPNAME.ADMIN"]
+        }
+    ]
+}
+
