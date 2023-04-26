@@ -24,7 +24,7 @@
         <footer>
             <OverflowToolbar id="idMainFooter">
                 <ToolbarSpacer/>
-				<Button  text="Footer button" press="onPressShowGenericTiles"  type="{= ${AppConfig>/Settings/isActive} ? 'Emphasized' : 'Default'}" />
+				<Button  text="Footer button" press="onPressShowGenericTiles"  type="{= ${AppConfig>/Settings/isActive} ? 'Emphasized' : 'Ghost'}" />
             </OverflowToolbar>
         </footer>
     </Page>
