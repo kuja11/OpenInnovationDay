@@ -2,16 +2,30 @@
 	controllerName="com.gavdilabs.ui5template.controller.Main"
 	displayBlock="true"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Page id="page" floatingFooter="true"> <!-- title="{i18n>title}"  -->
+        <customHeader>
+            <Bar>
+                <contentLeft>                                
 
-<List
-		items="{/User}"
-		headerText="Users"
-		growing="true"
-		growingThreshold="4"
-		growingScrollToLoad="false">
-		<StandardListItem
-            title="{firstName} {lastName}"
-			description="{userName}"/>
-	</List>
+				</contentLeft>
+                <contentMiddle>
+                    <Title class="sapUiTinyMarginTop sapUiSmallMarginBegin" text="{i18n>appTitle}"/>
+                </contentMiddle>
+                <contentRight>
+                    
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <content>
+            <core:Fragment fragmentName="com.gavdilabs.ui5template.view.fragments.NewJob" type="XML"/>
+        </content>
+        <footer>
+            <OverflowToolbar id="idMainFooter">
+                <ToolbarSpacer/>
+				<Button  text="Footer button" press="onPressShowGenericTiles"  type="{= ${AppConfig>/Settings/isActive} ? 'Emphasized' : 'Default'}" />
+            </OverflowToolbar>
+        </footer>
+    </Page>
 </mvc:View>

@@ -1,0 +1,106 @@
+.inActiveCard html.sap-desktop .sapMGT:hover:not(.sapMGTPressActive) {
+	opacity: 0.6 !important;
+    box-shadow: none !important;    /* 0 0 0 0.0625rem rgb(85 107 130 / 72%), 0 0.625rem 1.875rem 0 rgb(85 107 130 / 30%) !important; */
+    
+}
+
+.customToolbarMarginTop {
+    margin-top: 0.6rem !important;
+    height: 2.75rem !important;
+}
+
+.force-width100{
+	width: 100% !important;
+}
+
+.force-maxheight600{
+	max-height: 600px !important;
+}
+
+.MaxWidth150 {
+	width: 150px !important;
+}
+
+.MaxWidth300 {
+	width: 300px !important;
+}
+
+.MaxWidth600 {
+	width: 600px !important;
+}
+
+.Force-Center {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+.forceOpacityDisabled {
+	opacity: 0.6 !important;
+}
+
+.forceWhiteBackGround {
+    background-color: #fff !important;
+    
+}
+
+.forceCheckboxNoneRelative .sapMCb {
+    position: static !important;
+}
+
+.sapMObjStatus .sapMObjStatusTitle, .sapMObjStatus .sapMObjStatusText{
+  vertical-align: baseline !important;
+}
+
+.customValueStateError {
+    border-color: red;
+    border-style: solid;
+    padding: 2px;
+    border-width: 2px;
+}
+
+.customValueStateInfo {
+    border-color: #0a6ed1;
+    border-style: solid;
+    padding: 2px;
+    border-width: 2px;
+}
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+    font-size: 1rem;
+    margin-top: 2px;
+  }

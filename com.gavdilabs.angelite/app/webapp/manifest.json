@@ -67,8 +67,21 @@
                     "autoExpandSelect": true,
                     "earlyRequests": true
                 }
-            }
+            },
+            "AppConfig": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/AppConfig.json",
+				"preload": true
+			}
         },
+        "resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
         "routing": {
             "config": {
                 "routerClass": "sap.m.routing.Router",

@@ -1,4 +1,4 @@
-import { Request } from "@sap/cds/apis/services";
+/* import { Request } from "@sap/cds/apis/services";
 import { Handler, OnCreate, OnDelete, OnRead, OnUpdate, Req } from "cds-routing-handlers";
 import { Inject, Service } from "typedi";
 import { SanitizedEntity } from "../../entities/BasicService";
@@ -34,3 +34,4 @@ export default class NWProductHandler {
     }
 
 }
+ */

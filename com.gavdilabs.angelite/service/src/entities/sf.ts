@@ -1,16 +1,4 @@
-export interface IUser {
-  ID: string;
-  createdAt?: Date;
-  createdBy?: string;
-  modifiedAt?: Date;
-  modifiedBy?: string;
-  firstName: string;
-  lastName: string;
-  userName: string;
-  email: string;
-}
-
-export interface ISfPosition {
+export interface IPosition {
   code: string;
   effectiveStartDate: Date;
   businessUnit: string;
@@ -64,13 +52,13 @@ export interface ISfPosition {
   transactionSequence: number;
   type: string;
   vacant: boolean;
-  createdByNav?: ISfUser;
-  incumbentNav?: ISfUser;
-  lastModifiedByNav?: ISfUser;
-  parentPosition?: ISfPosition;
+  createdByNav?: IUser;
+  incumbentNav?: IUser;
+  lastModifiedByNav?: IUser;
+  parentPosition?: IPosition;
 }
 
-export interface ISfUser {
+export interface IUser {
   userId: string;
   addressLine1: string;
   addressLine2: string;
@@ -214,28 +202,26 @@ export interface ISfUser {
   veteranProtected: boolean;
   veteranSeparated: boolean;
   zipCode: string;
-  customManager?: ISfUser[];
-  customReports?: ISfUser[];
-  directReports?: ISfUser[];
-  hr?: ISfUser;
-  hrReports?: ISfUser[];
-  incumbentOfPositionNav?: ISfPosition[];
-  manager?: ISfUser;
-  matrixManager?: ISfUser[];
-  matrixReports?: ISfUser[];
-  proxy?: ISfUser[];
-  secondManager?: ISfUser;
-  secondReports?: ISfUser[];
+  customManager?: IUser[];
+  customReports?: IUser[];
+  directReports?: IUser[];
+  hr?: IUser;
+  hrReports?: IUser[];
+  incumbentOfPositionNav?: IPosition[];
+  manager?: IUser;
+  matrixManager?: IUser[];
+  matrixReports?: IUser[];
+  proxy?: IUser[];
+  secondManager?: IUser;
+  secondReports?: IUser[];
 }
 
 export enum Entity {
-  User = "BasicService.User",
-  SfPosition = "BasicService.SfPosition",
-  SfUser = "BasicService.SfUser",
+  Position = "sf.Position",
+  User = "sf.User",
 }
 
 export enum SanitizedEntity {
+  Position = "Position",
   User = "User",
-  SfPosition = "SfPosition",
-  SfUser = "SfUser",
 }
