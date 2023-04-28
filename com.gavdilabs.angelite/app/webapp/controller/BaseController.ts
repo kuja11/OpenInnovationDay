@@ -12,6 +12,15 @@ import History from "sap/ui/core/routing/History";
  */
 export default abstract class BaseController extends Controller {
 
+	public getResourcePath (innerPath : string) {
+		var sRootPath = jQuery.sap.getModulePath("com.gavdilabs.ui5template");
+		if (sRootPath === ".") {
+			return innerPath;
+		} else {
+			return sRootPath + "/" + innerPath;
+		}
+	}
+
 	/**
 	 * Convenience method for accessing the component of the controller's view.
 	 * @returns The component of the controller's view

@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<!-- <Panel  expandable="true"  expanded="false" > -->
+    <VBox alignItems="Center" alignContent="Center">
+        <VBox id="ActionContainer" alignItems="Center" alignContent="Center" width="90%" >
+            
+        </VBox>
+    </VBox>
+    <!-- </Panel> -->
+</core:FragmentDefinition>

@@ -1,14 +1,27 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
-	<VBox >
-		<List
-			items="{/SfUser}"
-			headerText="Users"
-			growing="true"
-			growingThreshold="20"
-			growingScrollToLoad="false">
-			<StandardListItem
-				title="{firstName} {lastName}"
-				description="{userName}"/>
-		</List>
-	</VBox>
+	<FlexBox class="sapUiSmallMargin"  visible="true" >
+		<Title text="User" width="200px"/>
+		<GenericTile id="taffy" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout customValueStateInfo" header="TAFFY" press="onPressTile"
+			subheader="Start Helper">
+			<TileContent>
+				<ImageContent src="sap-icon://travel-request" />
+			</TileContent>
+		</GenericTile>
+
+		<!-- <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout inActiveCard" header="Another app">
+			<TileContent>
+				<ImageContent src="sap-icon://overview-chart" />
+			</TileContent>
+		</GenericTile> -->
+	</FlexBox>
+
+	<FlexBox class="sapUiSmallMargin"  visible="true" >
+		<Title text="Admin" width="200px"/>
+		<GenericTile id="admin" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout customValueStateInfo" header="New model" press="onPressTile"
+			subheader="Create new helper">
+			<TileContent>
+				<ImageContent src="sap-icon://multi-select" />
+			</TileContent>
+		</GenericTile>
+	</FlexBox>
 </core:FragmentDefinition>

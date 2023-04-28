@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
+	<VBox width="600px">
+		<Title  text="{AppConfig>/TAFFY/Question}"  />
+		<VBox items="{AppConfig>/TAFFY/answers}">
+			<CheckBox  text="{AppConfig>text}"  width="500px" />
+		</VBox>
+	</VBox>
+	
+</core:FragmentDefinition>

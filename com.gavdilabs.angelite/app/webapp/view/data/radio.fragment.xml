@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
+	<VBox width="600px">
+		<Title  text="{AppConfig>/TAFFY/Question}"  />
+		<RadioButtonGroup buttons="{AppConfig>/TAFFY/answers}" width="500px" class="sapUiMediumMarginBottom"  selectedIndex="{AppConfig>/Settings/iIndex}" >
+			<RadioButton text="{AppConfig>text}"  /> <!-- selected="{Selected}" -->
+		</RadioButtonGroup>
+	</VBox>
+</core:FragmentDefinition>

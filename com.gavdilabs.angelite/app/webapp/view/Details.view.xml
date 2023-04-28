@@ -1,0 +1,73 @@
+<mvc:View
+	controllerName="com.gavdilabs.ui5template.controller.Details"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout">
+
+	<Page id="page" floatingFooter="true" > <!-- title="{i18n>title}"  -->
+        <customHeader>
+            <Bar>
+                <contentLeft>                                
+                    <Button class="sapUiTinyMarginTop" type="Back" press="onNavBack" /> 
+				</contentLeft>
+                <contentMiddle>
+                    <Title class="sapUiTinyMarginTop" text="{i18n>appTitle}"/>
+                </contentMiddle>
+                <contentRight>
+                    
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <content>
+            <l:ResponsiveSplitter id="myResponseSplitter" defaultPane="default" width="100%">
+                        <l:PaneContainer id="_IDGenPaneContainer1" orientation="{= ${device>/isPhone}  === true ? 'Vertical' : 'Horizontal' }">
+                            <l:SplitPane requiredParentWidth="350" id="default">
+                                <l:layoutData>
+                                    <l:SplitterLayoutData id="splitter_layout_container1" size="{AppConfig>/Settings/leftPaneSize}" />
+                                </l:layoutData>
+                                <Panel id="_IDGenPanel1" height="100%" > <!-- busyIndicatorDelay="0" busy="{AppConfig>/Settings/showBusyMain}" -->
+                                    <!-- <BusyIndicator id="_IDGenBusyIndicator1" text="... loading" class="sapUiTinyMarginBottom Force-Center" visible="{AppConfig>/Settings/showBusyMain}"/> -->
+                                    <core:Fragment fragmentName="com.gavdilabs.ui5template.view.fragments.ActionContainer" type="XML"/>
+                                </Panel>
+                            </l:SplitPane>
+
+                            <l:PaneContainer id="_IDGenPaneContainer2" orientation="{= ${device>/isPhone}  === true ? 'Vertical' : 'Horizontal' }">
+                                <l:SplitPane requiredParentWidth="350" id="splitRight">
+                                    <l:layoutData>
+                                        <l:SplitterLayoutData id="splitter_layout_detail" size="100%" minSize="100%" />
+                                    </l:layoutData>
+
+                                    <Panel id="detail" visible="{AppConfig>/Settings/detailVisible}" width="100%"  busyIndicatorDelay="0" busy="{AppConfig>/Settings/showBusyDetail}" >
+                                        <headerToolbar>
+                                            <OverflowToolbar class="customToolbarMarginTop">
+                                                <Title class="sapUiTinyMarginEnd" text="{AppConfig>/Data/SplitterHeaderText}"/>
+                                                <ToolbarSpacer/>
+                                                <Button icon="sap-icon://decline" type="Transparent" press="onCloseSplitter" tooltip="Close"/>
+                                        </OverflowToolbar>
+                                    </headerToolbar>
+                                        <BusyIndicator text="... loading" class="sapUiSmallMargin Force-Center" visible="{AppConfig>/Settings/showBusyDetail}"/>
+                                        <core:Fragment id="fragDetailPage"  fragmentName="com.gavdilabs.ui5template.view.fragments.ActionSplitter" type="XML"/>
+                                    </Panel>
+                                </l:SplitPane>
+
+                                
+                            </l:PaneContainer>
+                        </l:PaneContainer>
+                    </l:ResponsiveSplitter>
+			
+        </content>
+        <footer>
+            <OverflowToolbar id="idDetailsFooter" visible="true">
+                <ToolbarSpacer/>
+				<Button  text="Continue"  type="Emphasized" press="onPressContinue"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+
+
+	
+
+
+</mvc:View> 

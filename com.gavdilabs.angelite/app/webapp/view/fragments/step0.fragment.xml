@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
+	<VBox>
+		<core:Fragment id="fragDetailPage"  fragmentName="com.gavdilabs.ui5template.view.data.checkbox" type="XML"/>
+	</VBox>
+</core:FragmentDefinition>

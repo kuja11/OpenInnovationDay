@@ -21,11 +21,13 @@
         <content>
             <core:Fragment fragmentName="com.gavdilabs.ui5template.view.fragments.NewJob" type="XML"/>
         </content>
-        <footer>
+		<!--
+         <footer>
             <OverflowToolbar id="idMainFooter">
                 <ToolbarSpacer/>
 				<Button  text="Footer button" press="onPressShowGenericTiles"  type="{= ${AppConfig>/Settings/isActive} ? 'Emphasized' : 'Ghost'}" />
             </OverflowToolbar>
-        </footer>
+        </footer> 
+		-->
     </Page>
 </mvc:View>

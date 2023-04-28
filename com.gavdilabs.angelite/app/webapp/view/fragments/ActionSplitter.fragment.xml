@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<VBox alignItems="Center" justifyContent="SpaceBetween">
+        <VBox id="ActionSplitterContainer" alignItems="Center" width="90%" >
+			<TextArea value="{AppConfig>/TAFFY/finalAnswer}"  growing="true" growingMaxLines="4" width="400px" editable="false" />
+			<Link
+				text="Open Help Article"
+				target="_blank"
+				href="http://www.sap.com" />
+		</VBox>
+		<OverflowToolbar class="sapUiMediumMarginTop" style="Clear" design="Transparent">
+			<ToolbarSpacer/>
+			<Button class="sapUiSmallMarginBeginEnd" text="Retry" press="onCloseSplitter"  type="Default" />
+			<Button class="sapUiSmallMarginBeginEnd" text="OK" press="onPressCreateNewJob"  type="Emphasized" />
+		</OverflowToolbar>
+		
+	</VBox>
+</core:FragmentDefinition>

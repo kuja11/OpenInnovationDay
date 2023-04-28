@@ -73,6 +73,12 @@
 				"settings": {},
 				"uri": "model/AppConfig.json",
 				"preload": true
+			},
+            "Taffy": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/TAFY.json",
+				"preload": true
 			}
         },
         "resources": {
@@ -92,18 +98,28 @@
                 "async": true
             },
             "routes": [
-                {
-                    "pattern": "",
-                    "name": "main",
-                    "target": "main"
-                }
-            ],
-            "targets": {
-                "main": {
-                    "viewId": "main",
-                    "viewName": "Main"
-                }
-            }
+				{
+					"pattern": "",
+					"name": "main",
+					"target": "main"
+				},
+				{
+					"pattern": "details",
+					"name": "details",
+					"target": "details"
+				}
+			],
+			"targets": {
+				"main": {
+					"viewId": "main",
+					"viewName": "Main"
+				},
+				"details": {
+					"viewId": "details",
+					"viewName": "Details",
+					 "viewLevel": 2
+				}
+			}
         }
     }
 }

@@ -1,6 +1,64 @@
 {
     "Settings": {
         "isActive": true,
-        "showBusyDetail": false
-    } 
+        "showBusyDetail": false,
+        "leftPaneSize": "100%",
+        "showBusyMain": false,
+        "detailVisible": false,
+        "isEditMode": false,
+        "isDeleteMode": false,
+        "isLogs": false,
+        "isShowGenericTiles" : false,
+        "scimURL": "",
+        "iIndex" : 0
+    },
+    "Data": {
+        "URL": "",
+        "Source": "",
+        "DisplayText": "",
+        "Items": [],
+        "DialogItems": [],
+        "SplitterHeaderText": "",
+        "SplitterAction": ""
+    },
+    "TAFFY": {},
+    "stepItems": {
+        "step": 0,
+        "text": "First option",
+        "childs": [
+            {
+                "step": "1.1",
+                "text": "step UX"
+            },
+            {
+                "step": "1.2",
+                "text": "step system architecture"
+            },
+            {
+                "step": "1.3",
+                "text": "step training"
+            }
+        ]
+    },
+    "radioItems": {
+        "step": 0,
+        "text": "Second option",
+        "childs": [
+            {
+                "id": 1,
+                "step": "1.1",
+                "text": "Yes"
+            },
+            {
+                "id": 2,
+                "step": "1.2",
+                "text": "No"
+            },
+            {
+                "id": 3,
+                "step": "1.3",
+                "text": "Maybe"
+            }
+        ]
+    }
 }

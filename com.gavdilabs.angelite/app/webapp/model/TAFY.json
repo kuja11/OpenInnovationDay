@@ -1,0 +1,174 @@
+{
+  "questionId": "1.1",
+  "Question": "What's about?",
+  "answertype": "radio",
+  "helptext": "No help text",
+  "link to help": "https://google.com",
+  "active": true,
+  "answetype": "radio",
+  "answers": [
+    {
+      "answerId": "1.1.1",
+      "answer": "User Experience",
+      "question": [
+        {
+          "questionId": "2.1",
+          "QAnswerId": "1.1.1",
+          "Question": "What's the matter?",
+          "answertype": "checkbox",
+          "helptext": "If you do not know what to answer, please type maybe",
+          "link to help": "https://google.com",
+          "final": "https://google.com",
+          "active": true,
+          "answetype": "checkbox",
+          "answers": [
+            {
+              "answerId": "2.1.2",
+              "answer": "Something about the Process ",
+              "final": {
+                "answer": "Please visit the process article. Here you will see how to request changs for processes",
+                "link to help": "www.wikipedia.org/wiki/Workflow"
+              }
+            },
+            {
+              "answerId": "2.1.1",
+              "answer": "Poor systems UI",
+              "final": {
+                "answer": "Poor Systems",
+                "link to help": "https://google.com"
+              }
+            },
+            {
+              "answerId": "2.1.3",
+              "answer": "Poor Data Quality",
+              "final": {
+                "answer": "go here",
+                "link to help": "https://google.com"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "answerId": "1.1.2",
+      "answer": "Compliance",
+      "question": [
+        {
+          "Question": "Alright, then I have these options",
+          "questionId": "2.2",
+          "QAnswerId": "1.1.2",
+          "answertype": "radio",
+          "helptext": "If you do not know what to answer, please type maybe",
+          "link to help": "https://google.com",
+          "active": true,
+          "answetype": "radio",
+          "answers": [
+            {
+              "answerId": "2.2.1",
+              "answer": "Compliance ServiceNow",
+              "final": {
+                        "answer": "Link to ServiceNow article",
+                        "link to help": "https://google.com"
+                      }
+            },
+            {
+              "answerId": "2.2.2",
+              "answer": "Go to Report Incident",
+              "final": {
+                        "answer": "Report Incident app",
+                        "link to help": "https://google.com"
+                      }
+            }
+            ]
+        }
+      ]
+    },
+    {
+      "answerId": "1.1.3",
+      "answer": "Efficiency of Service",
+      "question": [
+        {
+          "Question": "Alright, then I have this solution",
+          "questionId": "2.2",
+          "QAnswerId": "1.1.2",
+          "answertype": "radio",
+          "helptext": "If you do not know what to answer, please type maybe",
+          "link to help": "https://google.com",
+          "active": true,
+          "answetype": "radio",
+          "answers": [
+            {
+              "answerId": "2.2.1",
+              "answer": "Go to Rehire App",
+              "question": [
+                {
+                  "Question": "Do you have a problem",
+                  "questionId": "3.1",
+                  "qAnswerId": "2.2.2",
+                  "answertype": "checkbox",
+                  "helptext": "If you do not know what to answer, please type maybe",
+                  "link to help": "https://google.com",
+                  "active": true,
+                  "answetype": "radio",
+                  "answers": [
+                    {
+                      "answerId": "3.1.1",
+                      "answer": "yes",
+                      "final": {
+                        "answer": "go here",
+                        "link to help": "https://google.com"
+                      }
+                    },
+                    {
+                      "answerId": "3.1.2",
+                      "answer": "yes",
+                      "final": {
+                        "answer": "go here",
+                        "link to help": "https://google.com"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "answerId": "2.2.2",
+              "answer": "Go to Promotion App",
+              "question": [
+                {
+                  "Question": "Do you have a problem",
+                  "questionId": "3.1",
+                  "qAnswerId": "2.2.2",
+                  "answertype": "checkbox",
+                  "helptext": "If you do not know what to answer, please type maybe",
+                  "link to help": "https://google.com",
+                  "active": true,
+                  "answetype": "radio",
+                  "answers": [
+                    {
+                      "answerId": "3.1.1",
+                      "answer": "yes",
+                      "final": {
+                        "answer": "go here",
+                        "link to help": "https://google.com"
+                      }
+                    },
+                    {
+                      "answerId": "3.1.2",
+                      "answer": "yes",
+                      "final": {
+                        "answer": "go here",
+                        "link to help": "https://google.com"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
